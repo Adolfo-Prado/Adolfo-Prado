@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 110" width="1200" height="110" role="img" aria-label="">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1a33"/>
+      <stop offset="0.45" stop-color="#151036"/>
+      <stop offset="1" stop-color="#0b0f1a"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="card"><rect width="1200" height="110" rx="18"/></clipPath>
+  </defs>
+
+  <style>
+    .trace { fill: none; stroke: #2b2f5a; stroke-width: 2; }
+    .run { fill: none; stroke: url(#pulse); stroke-width: 2.5; stroke-linecap: round;
+           stroke-dasharray: 60 1400; stroke-dashoffset: 1460; animation: run 6s linear infinite; }
+    .node { fill: #7C5CFF; animation: blink 2.4s ease-in-out infinite; }
+    .mark { font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace;
+            font-size: 22px; font-weight: 700; fill: #7C5CFF; animation: blink 3s ease-in-out infinite; }
+    @keyframes run { to { stroke-dashoffset: 0; } }
+    @keyframes blink { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+  </style>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="110" fill="url(#bg)"/>
+    <rect width="1200" height="110" fill="url(#grid)"/>
+
+    <path class="trace" d="M0 40 H260 L290 70 H540"/>
+    <path class="trace" d="M1200 70 H940 L910 40 H660"/>
+    <path class="trace" d="M0 92 H160"/>
+    <path class="trace" d="M1200 18 H1040"/>
+
+    <path class="run" d="M0 40 H260 L290 70 H540"/>
+    <path class="run" style="animation-delay:-3s" d="M1200 70 H940 L910 40 H660"/>
+    <path class="run" style="animation-delay:-1.5s" d="M0 92 H160"/>
+    <path class="run" style="animation-delay:-4.5s" d="M1200 18 H1040"/>
+
+    <g filter="url(#glow)">
+      <circle class="node" cx="540" cy="70" r="4"/>
+      <circle class="node" style="animation-delay:-1.2s" cx="660" cy="40" r="4"/>
+      <circle class="node" style="animation-delay:-0.6s" cx="160" cy="92" r="3"/>
+      <circle class="node" style="animation-delay:-1.8s" cx="1040" cy="18" r="3"/>
+    </g>
+
+    <text class="mark" x="600" y="63" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+</svg>

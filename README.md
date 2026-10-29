@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:512BD4,100:0A66C2&height=200&section=header&text=Adolfo%20Prado&fontSize=52&fontColor=ffffff&fontAlignY=36&desc=Desarrollador%20full-stack%20%C2%B7%20Blazor%20%2F%20.NET&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Adolfo Prado · Desarrollador full-stack · Blazor / .NET">
+<img src="assets/header.svg" width="100%" alt="Adolfo Prado · Desarrollador full-stack · Blazor / .NET">
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1500&color=7C5CFF&center=true&vCenter=true&width=480&lines=Aplicaciones+de+gesti%C3%B3n+con+Blazor+Server;Integraciones+y+automatizaci%C3%B3n;Agentes+de+IA+que+leen+documentaci%C3%B3n;Apps+m%C3%B3viles+con+Kotlin+y+Flutter" alt="Blazor Server · Integraciones · IA aplicada · Kotlin y Flutter">
@@ -79,4 +79,4 @@ Un proyecto móvil con Kotlin o Flutter.
 
 <p align="center"><sub>También: Blazor Server · n8n · Railway · OpenRouter</sub></p>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A66C2,100:512BD4&height=110&section=footer" width="100%" alt="">
+<img src="assets/footer.svg" width="100%" alt="">

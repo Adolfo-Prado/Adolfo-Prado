@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280" role="img" aria-label="Adolfo Prado · Desarrollador full-stack · Blazor / .NET">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f1a"/>
+      <stop offset="0.55" stop-color="#151036"/>
+      <stop offset="1" stop-color="#0a1a33"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7C5CFF"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#512BD4" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#512BD4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="card"><rect width="1200" height="280" rx="18"/></clipPath>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace; }
+    .code { font-size: 14px; fill: #8b9cff; opacity: 0; animation: drift 9s linear infinite; }
+    .code.b { fill: #5cc8ff; }
+    .trace { fill: none; stroke: #2b2f5a; stroke-width: 2; }
+    .run { fill: none; stroke: url(#pulse); stroke-width: 2.5; stroke-linecap: round;
+           stroke-dasharray: 60 1400; stroke-dashoffset: 1460; animation: run 5s linear infinite; }
+    .node { fill: #7C5CFF; animation: blink 2.4s ease-in-out infinite; }
+    .cursor { animation: cursor 1s steps(1) infinite; }
+    @keyframes drift { 0% { opacity: 0; transform: translateY(8px); }
+                       20% { opacity: 0.55; } 80% { opacity: 0.55; }
+                       100% { opacity: 0; transform: translateY(-8px); } }
+    @keyframes run { to { stroke-dashoffset: 0; } }
+    @keyframes blink { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+    @keyframes cursor { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+  </style>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="280" fill="url(#bg)"/>
+    <rect width="1200" height="280" fill="url(#grid)"/>
+    <ellipse cx="600" cy="140" rx="420" ry="150" fill="url(#halo)"/>
+
+    <!-- circuitos -->
+    <g>
+      <path class="trace" d="M0 46 H180 L214 80 H330"/>
+      <path class="trace" d="M0 252 H110 L140 224 H250"/>
+      <path class="trace" d="M1200 52 H1030 L996 86 H880"/>
+      <path class="trace" d="M1200 252 H1090 L1060 224 H950"/>
+      <path class="trace" d="M420 0 V24 L446 50 H560"/>
+      <path class="trace" d="M780 280 V256 L754 230 H640"/>
+
+      <path class="run" d="M0 46 H180 L214 80 H330"/>
+      <path class="run" style="animation-delay:-1.6s" d="M0 252 H110 L140 224 H250"/>
+      <path class="run" style="animation-delay:-3.1s" d="M1200 52 H1030 L996 86 H880"/>
+      <path class="run" style="animation-delay:-0.8s" d="M1200 252 H1090 L1060 224 H950"/>
+      <path class="run" style="animation-delay:-2.4s" d="M420 0 V24 L446 50 H560"/>
+      <path class="run" style="animation-delay:-4.2s" d="M780 280 V256 L754 230 H640"/>
+
+      <g filter="url(#glow)">
+        <circle class="node" cx="330" cy="80" r="4"/>
+        <circle class="node" style="animation-delay:-0.6s" cx="250" cy="224" r="4"/>
+        <circle class="node" style="animation-delay:-1.2s" cx="880" cy="86" r="4"/>
+        <circle class="node" style="animation-delay:-1.8s" cx="950" cy="224" r="4"/>
+        <circle class="node" style="animation-delay:-0.9s" cx="560" cy="50" r="4"/>
+        <circle class="node" style="animation-delay:-2.1s" cx="640" cy="230" r="4"/>
+      </g>
+    </g>
+
+    <!-- código flotando -->
+    <g class="mono">
+      <text class="code"   x="40"  y="128" style="animation-delay:0s">@page "/pedidos"</text>
+      <text class="code b" x="40"  y="163" style="animation-delay:-3s">await col.Find(f).ToListAsync();</text>
+      <text class="code"   x="40"  y="198" style="animation-delay:-6s">builder.Services.AddRazorComponents();</text>
+      <text class="code b" x="1160" y="128" text-anchor="end" style="animation-delay:-1.5s">@app.post("/licitaciones")</text>
+      <text class="code"   x="1160" y="163" text-anchor="end" style="animation-delay:-4.5s">fun main() = runBlocking { }</text>
+      <text class="code b" x="1160" y="198" text-anchor="end" style="animation-delay:-7.5s">Widget build(BuildContext ctx)</text>
+    </g>
+
+    <!-- nombre -->
+    <g text-anchor="middle">
+      <text class="mono" x="600" y="146" font-size="54" font-weight="700" fill="#ffffff">
+        <tspan fill="#7C5CFF">&lt;</tspan>Adolfo Prado<tspan fill="#7C5CFF"> /&gt;</tspan>
+      </text>
+      <text class="mono" x="600" y="188" font-size="19" fill="#b8c0ff">
+        Desarrollador full-stack · Blazor / .NET<tspan class="cursor" fill="#38BDF8">_</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
