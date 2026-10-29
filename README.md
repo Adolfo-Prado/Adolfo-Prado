@@ -5,6 +5,12 @@
   C# · Blazor Server · Integración de sistemas · Kotlin · Flutter
 </p>
 
+<p align="center">
+  <a href="https://www.linkedin.com/in/adolfo-prado-mart%C3%ADnez-de-salinas-2488aa332/">
+    <img src="https://img.shields.io/badge/LinkedIn-Adolfo%20Prado-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn">
+  </a>
+</p>
+
 ---
 
 ### Sobre mí
