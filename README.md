@@ -50,10 +50,27 @@ Un proyecto móvil con Kotlin o Flutter.
 
 **Web y backend**
 
-<img src="https://skillicons.dev/icons?i=cs,dotnet,mongodb,postgres,supabase,py,fastapi,aws,linux,git" alt="C#, .NET, MongoDB, PostgreSQL, Supabase, Python, FastAPI, AWS, Linux, Git">
+<p>
+  <a href="https://learn.microsoft.com/dotnet/csharp/" title="C#"><img src="https://skillicons.dev/icons?i=cs" title="C#" alt="C#" width="48"></a>
+  <a href="https://dotnet.microsoft.com/" title=".NET"><img src="https://skillicons.dev/icons?i=dotnet" title=".NET" alt=".NET" width="48"></a>
+  <a href="https://www.mongodb.com/" title="MongoDB"><img src="https://skillicons.dev/icons?i=mongodb" title="MongoDB" alt="MongoDB" width="48"></a>
+  <a href="https://www.postgresql.org/" title="PostgreSQL"><img src="https://skillicons.dev/icons?i=postgres" title="PostgreSQL" alt="PostgreSQL" width="48"></a>
+  <a href="https://supabase.com/" title="Supabase"><img src="https://skillicons.dev/icons?i=supabase" title="Supabase" alt="Supabase" width="48"></a>
+  <a href="https://www.python.org/" title="Python"><img src="https://skillicons.dev/icons?i=py" title="Python" alt="Python" width="48"></a>
+  <a href="https://fastapi.tiangolo.com/" title="FastAPI"><img src="https://skillicons.dev/icons?i=fastapi" title="FastAPI" alt="FastAPI" width="48"></a>
+  <a href="https://aws.amazon.com/" title="AWS"><img src="https://skillicons.dev/icons?i=aws" title="AWS" alt="AWS" width="48"></a>
+  <a href="https://www.kernel.org/" title="Linux"><img src="https://skillicons.dev/icons?i=linux" title="Linux" alt="Linux" width="48"></a>
+  <a href="https://git-scm.com/" title="Git"><img src="https://skillicons.dev/icons?i=git" title="Git" alt="Git" width="48"></a>
+</p>
 
 **Móvil y frontend**
 
-<img src="https://skillicons.dev/icons?i=kotlin,flutter,dart,firebase,angular" alt="Kotlin, Flutter, Dart, Firebase, Angular">
+<p>
+  <a href="https://kotlinlang.org/" title="Kotlin"><img src="https://skillicons.dev/icons?i=kotlin" title="Kotlin" alt="Kotlin" width="48"></a>
+  <a href="https://flutter.dev/" title="Flutter"><img src="https://skillicons.dev/icons?i=flutter" title="Flutter" alt="Flutter" width="48"></a>
+  <a href="https://dart.dev/" title="Dart"><img src="https://skillicons.dev/icons?i=dart" title="Dart" alt="Dart" width="48"></a>
+  <a href="https://firebase.google.com/" title="Firebase"><img src="https://skillicons.dev/icons?i=firebase" title="Firebase" alt="Firebase" width="48"></a>
+  <a href="https://angular.dev/" title="Angular"><img src="https://skillicons.dev/icons?i=angular" title="Angular" alt="Angular" width="48"></a>
+</p>
 
 También: Blazor Server · n8n · Railway · OpenRouter
