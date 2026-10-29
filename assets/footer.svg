@@ -1,11 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 160" width="1200" height="160" role="img" aria-label="">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 170" width="1200" height="170" role="img" aria-label="">
   <defs>
-    <linearGradient id="waveA" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7C5CFF"/><stop offset="0.5" stop-color="#38BDF8"/><stop offset="1" stop-color="#7C5CFF"/>
-    </linearGradient>
-    <linearGradient id="waveB" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#38BDF8"/><stop offset="0.5" stop-color="#512BD4"/><stop offset="1" stop-color="#38BDF8"/>
-    </linearGradient>
     <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#7C5CFF"/><stop offset="1" stop-color="#38BDF8"/>
     </linearGradient>
@@ -19,10 +13,38 @@
       <feGaussianBlur stdDeviation="3" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <linearGradient id="bg" x1="0" y1="160" x2="0" y2="30" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0b0f1a"/><stop offset="0.75" stop-color="#120e2e"/>
+    <!-- transparencia lateral: las capas se aclaran en los extremos y se intensifican en el centro -->
+    <linearGradient id="sideFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="0.3" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.6"/>
+      <stop offset="0.7" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.35"/>
     </linearGradient>
-    <clipPath id="card"><rect width="1200" height="160" rx="18"/></clipPath>
+    <linearGradient id="vfade" x1="0" y1="85" x2="0" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.55" stop-color="#fff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="bodyMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="170">
+      <rect width="1200" height="170" fill="url(#vfade)"/>
+    </mask>
+    <linearGradient id="rfade" x1="0" y1="55" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="ridgeMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="170">
+      <rect width="1200" height="170" fill="url(#rfade)"/>
+    </mask>
+    <mask id="sideMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="170">
+      <rect width="1200" height="170" fill="url(#sideFade)"/>
+    </mask>
+    <linearGradient id="bg" x1="0" y1="170" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b0f1a"/>
+      <stop offset="0.6" stop-color="#140f34"/>
+      <stop offset="1" stop-color="#101a3a"/>
+    </linearGradient>
+    <clipPath id="card"><rect width="1200" height="170" rx="18"/></clipPath>
   </defs>
   <style>
     .mono { font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace; }
@@ -33,7 +55,7 @@
            stroke-dasharray: 60 1400; stroke-dashoffset: 1460; animation: run 5s linear infinite; }
     .node { fill: #7C5CFF; animation: blink 2.4s ease-in-out infinite; }
     .cursor { animation: cursor 1s steps(1) infinite; }
-    .wave { animation: flow linear infinite; }
+    .flow { animation: flow linear infinite; }
     .mark { font-size: 22px; font-weight: 700; fill: #7C5CFF; animation: blink 3s ease-in-out infinite; }
     @keyframes flow { from { transform: translateX(0); } to { transform: translateX(-1200px); } }
     @keyframes drift { 0% { opacity: 0; transform: translateY(8px); }
@@ -44,25 +66,29 @@
     @keyframes cursor { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
   </style>
   <g clip-path="url(#card)">
-    <g transform="translate(0 160) scale(1 -1)">
-    <g class="wave" style="animation-duration:20s"><path d="M0 60 V132 Q150 114 300 132 T600 132 T900 132 T1200 132 T1500 132 T1800 132 T2100 132 T2400 132 V60 Z" fill="url(#waveA)" fill-opacity="0.55"/></g>
-    <g class="wave" style="animation-duration:15s"><path d="M0 60 V118 Q100 103 200 118 T400 118 T600 118 T800 118 T1000 118 T1200 118 T1400 118 T1600 118 T1800 118 T2000 118 T2200 118 T2400 118 V60 Z" fill="url(#waveB)" fill-opacity="0.65"/></g>
+    <g mask="url(#bodyMask)">
+      <rect width="1200" height="170" fill="url(#bg)"/>
+      <rect width="1200" height="170" fill="url(#grid)"/>
     </g>
-    <rect y="70" width="1200" height="90" fill="url(#bg)"/>
-    <g transform="translate(0 160) scale(1 -1)">
-    <g class="wave" style="animation-duration:11s"><path d="M0 88 V104 Q150 92 300 104 T600 104 T900 104 T1200 104 T1500 104 T1800 104 T2100 104 T2400 104 V88 Z" fill="#120e2e" fill-opacity="1"/></g>
+    <g mask="url(#ridgeMask)">
+      <g mask="url(#sideMask)">
+        <g transform="translate(0 170) scale(1 -1)">
+      <g class="flow" style="animation-duration:26s"><polygon points="0,170 0,86 80,79 165,73 229,76 312,73 430,102 503,72 568,97 654,74 729,75 824,97 887,77 1007,84 1107,73 1200,86 1280,79 1365,73 1429,76 1512,73 1630,102 1703,72 1768,97 1854,74 1929,75 2024,97 2087,77 2207,84 2307,73 2400,86 2400,170" fill="#2a1f6e" fill-opacity="0.55"/><polyline points="0,86 80,79 165,73 229,76 312,73 430,102 503,72 568,97 654,74 729,75 824,97 887,77 1007,84 1107,73 1200,86 1280,79 1365,73 1429,76 1512,73 1630,102 1703,72 1768,97 1854,74 1929,75 2024,97 2087,77 2207,84 2307,73 2400,86" fill="none" stroke="#8B6CFF" stroke-opacity="0.6" stroke-width="1.5"/></g>
+      <g class="flow" style="animation-duration:18s"><polygon points="0,170 0,104 70,105 174,105 274,101 364,98 474,107 585,108 656,108 749,99 859,92 919,103 1038,110 1125,94 1200,104 1270,105 1374,105 1474,101 1564,98 1674,107 1785,108 1856,108 1949,99 2059,92 2119,103 2238,110 2325,94 2400,104 2400,170" fill="#16305f" fill-opacity="0.6"/><polyline points="0,104 70,105 174,105 274,101 364,98 474,107 585,108 656,108 749,99 859,92 919,103 1038,110 1125,94 1200,104 1270,105 1374,105 1474,101 1564,98 1674,107 1785,108 1856,108 1949,99 2059,92 2119,103 2238,110 2325,94 2400,104" fill="none" stroke="#38BDF8" stroke-opacity="0.55" stroke-width="1.5"/></g>
+      <g class="flow" style="animation-duration:12s"><polygon points="0,170 0,122 100,116 161,121 236,120 304,116 407,130 472,131 559,114 620,115 693,120 785,113 880,119 985,130 1071,120 1200,122 1300,116 1361,121 1436,120 1504,116 1607,130 1672,131 1759,114 1820,115 1893,120 1985,113 2080,119 2185,130 2271,120 2400,122 2400,170" fill="#1d1650" fill-opacity="0.75"/><polyline points="0,122 100,116 161,121 236,120 304,116 407,130 472,131 559,114 620,115 693,120 785,113 880,119 985,130 1071,120 1200,122 1300,116 1361,121 1436,120 1504,116 1607,130 1672,131 1759,114 1820,115 1893,120 1985,113 2080,119 2185,130 2271,120 2400,122" fill="none" stroke="#8B6CFF" stroke-opacity="0.75" stroke-width="1.5"/><circle cx="100" cy="116" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="236" cy="120" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="407" cy="130" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="559" cy="114" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="693" cy="120" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="880" cy="119" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1071" cy="120" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1300" cy="116" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1436" cy="120" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1607" cy="130" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1759" cy="114" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1893" cy="120" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="2080" cy="119" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="2271" cy="120" r="2.4" fill="#38BDF8" fill-opacity="0.75"/></g>
+        </g>
+      </g>
     </g>
-    <rect y="70" width="1200" height="90" fill="url(#grid)"/>
 
-    <path class="trace" d="M0 102 H230 L256 128 H500"/>
-    <path class="trace" d="M1200 128 H970 L944 102 H700"/>
-    <path class="run" style="animation-delay:0s" d="M0 102 H230 L256 128 H500"/>
-    <path class="run" style="animation-delay:-3s" d="M1200 128 H970 L944 102 H700"/>
+    <path class="trace" d="M0 120 H230 L256 146 H500"/>
+    <path class="trace" d="M1200 146 H970 L944 120 H700"/>
+    <path class="run" style="animation-delay:0s" d="M0 120 H230 L256 146 H500"/>
+    <path class="run" style="animation-delay:-3s" d="M1200 146 H970 L944 120 H700"/>
     <g filter="url(#glow)">
-      <circle class="node" style="animation-delay:0s" cx="500" cy="128" r="4"/>
-      <circle class="node" style="animation-delay:-1.5s" cx="700" cy="102" r="4"/>
+      <circle class="node" style="animation-delay:0s" cx="500" cy="146" r="4"/>
+      <circle class="node" style="animation-delay:-1.5s" cx="700" cy="120" r="4"/>
     </g>
 
-    <text class="mono mark" x="600" y="123" text-anchor="middle">&lt;/&gt;</text>
+    <text class="mono mark" x="600" y="141" text-anchor="middle">&lt;/&gt;</text>
   </g>
 </svg>

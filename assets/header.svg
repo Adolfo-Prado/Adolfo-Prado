@@ -1,11 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Adolfo Prado · Desarrollador full-stack · Blazor / .NET">
   <defs>
-    <linearGradient id="waveA" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7C5CFF"/><stop offset="0.5" stop-color="#38BDF8"/><stop offset="1" stop-color="#7C5CFF"/>
-    </linearGradient>
-    <linearGradient id="waveB" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#38BDF8"/><stop offset="0.5" stop-color="#512BD4"/><stop offset="1" stop-color="#38BDF8"/>
-    </linearGradient>
     <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#7C5CFF"/><stop offset="1" stop-color="#38BDF8"/>
     </linearGradient>
@@ -19,8 +13,36 @@
       <feGaussianBlur stdDeviation="3" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="240" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0b0f1a"/><stop offset="0.75" stop-color="#120e2e"/>
+    <!-- transparencia lateral: las capas se aclaran en los extremos y se intensifican en el centro -->
+    <linearGradient id="sideFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="0.3" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.6"/>
+      <stop offset="0.7" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="vfade" x1="0" y1="190" x2="0" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.55" stop-color="#fff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="bodyMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="300">
+      <rect width="1200" height="300" fill="url(#vfade)"/>
+    </mask>
+    <linearGradient id="rfade" x1="0" y1="220" x2="0" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="ridgeMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="300">
+      <rect width="1200" height="300" fill="url(#rfade)"/>
+    </mask>
+    <mask id="sideMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="300">
+      <rect width="1200" height="300" fill="url(#sideFade)"/>
+    </mask>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b0f1a"/>
+      <stop offset="0.6" stop-color="#140f34"/>
+      <stop offset="1" stop-color="#101a3a"/>
     </linearGradient>
     <clipPath id="card"><rect width="1200" height="300" rx="18"/></clipPath>
   </defs>
@@ -33,7 +55,7 @@
            stroke-dasharray: 60 1400; stroke-dashoffset: 1460; animation: run 5s linear infinite; }
     .node { fill: #7C5CFF; animation: blink 2.4s ease-in-out infinite; }
     .cursor { animation: cursor 1s steps(1) infinite; }
-    .wave { animation: flow linear infinite; }
+    .flow { animation: flow linear infinite; }
     .mark { font-size: 22px; font-weight: 700; fill: #7C5CFF; animation: blink 3s ease-in-out infinite; }
     @keyframes flow { from { transform: translateX(0); } to { transform: translateX(-1200px); } }
     @keyframes drift { 0% { opacity: 0; transform: translateY(8px); }
@@ -44,45 +66,53 @@
     @keyframes cursor { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
   </style>
   <g clip-path="url(#card)">
-    <g class="wave" style="animation-duration:22s"><path d="M0 160 V264 Q150 242 300 264 T600 264 T900 264 T1200 264 T1500 264 T1800 264 T2100 264 T2400 264 V160 Z" fill="url(#waveA)" fill-opacity="0.55"/></g>
-    <g class="wave" style="animation-duration:16s"><path d="M0 160 V248 Q100 230 200 248 T400 248 T600 248 T800 248 T1000 248 T1200 248 T1400 248 T1600 248 T1800 248 T2000 248 T2200 248 T2400 248 V160 Z" fill="url(#waveB)" fill-opacity="0.65"/></g>
-    <rect width="1200" height="200" fill="url(#bg)"/>
-    <g class="wave" style="animation-duration:12s"><path d="M0 198 V232 Q150 218 300 232 T600 232 T900 232 T1200 232 T1500 232 T1800 232 T2100 232 T2400 232 V198 Z" fill="#120e2e" fill-opacity="1"/></g>
-    <rect width="1200" height="200" fill="url(#grid)"/>
+    <g mask="url(#bodyMask)">
+      <rect width="1200" height="300" fill="url(#bg)"/>
+      <rect width="1200" height="300" fill="url(#grid)"/>
+    </g>
     <ellipse cx="600" cy="130" rx="420" ry="130" fill="url(#halo)"/>
+    <g mask="url(#ridgeMask)">
+      <g mask="url(#sideMask)">
+        <g>
+      <g class="flow" style="animation-duration:28s"><polygon points="0,300 0,206 80,193 165,225 228,188 340,218 406,207 503,187 621,216 694,186 759,211 845,188 920,189 1015,211 1078,220 1200,206 1280,193 1365,225 1428,188 1540,218 1606,207 1703,187 1821,216 1894,186 1959,211 2045,188 2120,189 2215,211 2278,220 2400,206 2400,300" fill="#2a1f6e" fill-opacity="0.55"/><polyline points="0,206 80,193 165,225 228,188 340,218 406,207 503,187 621,216 694,186 759,211 845,188 920,189 1015,211 1078,220 1200,206 1280,193 1365,225 1428,188 1540,218 1606,207 1703,187 1821,216 1894,186 1959,211 2045,188 2120,189 2215,211 2278,220 2400,206" fill="none" stroke="#8B6CFF" stroke-opacity="0.6" stroke-width="1.5"/></g>
+      <g class="flow" style="animation-duration:19s"><polygon points="0,300 0,230 70,240 174,240 274,232 364,227 474,244 585,246 656,246 749,229 859,214 919,237 1038,241 1102,223 1200,230 1270,240 1374,240 1474,232 1564,227 1674,244 1785,246 1856,246 1949,229 2059,214 2119,237 2238,241 2302,223 2400,230 2400,300" fill="#16305f" fill-opacity="0.6"/><polyline points="0,230 70,240 174,240 274,232 364,227 474,244 585,246 656,246 749,229 859,214 919,237 1038,241 1102,223 1200,230 1270,240 1374,240 1474,232 1564,227 1674,244 1785,246 1856,246 1949,229 2059,214 2119,237 2238,241 2302,223 2400,230" fill="none" stroke="#38BDF8" stroke-opacity="0.55" stroke-width="1.5"/></g>
+      <g class="flow" style="animation-duration:13s"><polygon points="0,300 0,254 100,245 161,265 238,249 312,246 419,245 522,265 639,259 704,260 791,243 852,244 925,249 1017,261 1078,259 1200,254 1300,245 1361,265 1438,249 1512,246 1619,245 1722,265 1839,259 1904,260 1991,243 2052,244 2125,249 2217,261 2278,259 2400,254 2400,300" fill="#1d1650" fill-opacity="0.75"/><polyline points="0,254 100,245 161,265 238,249 312,246 419,245 522,265 639,259 704,260 791,243 852,244 925,249 1017,261 1078,259 1200,254 1300,245 1361,265 1438,249 1512,246 1619,245 1722,265 1839,259 1904,260 1991,243 2052,244 2125,249 2217,261 2278,259 2400,254" fill="none" stroke="#8B6CFF" stroke-opacity="0.75" stroke-width="1.5"/><circle cx="100" cy="245" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="238" cy="249" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="419" cy="245" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="639" cy="259" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="791" cy="243" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="925" cy="249" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1078" cy="259" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1300" cy="245" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1438" cy="249" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1619" cy="245" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1839" cy="259" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1991" cy="243" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="2125" cy="249" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="2278" cy="259" r="2.4" fill="#38BDF8" fill-opacity="0.75"/></g>
+        </g>
+      </g>
+    </g>
 
     <path class="trace" d="M0 34 H170 L200 64 H320"/>
     <path class="trace" d="M1200 40 H1040 L1010 70 H890"/>
     <path class="trace" d="M420 0 V16 L444 40 H560"/>
-    <path class="trace" d="M0 214 H90 L118 188 H230"/>
-    <path class="trace" d="M1200 214 H1110 L1082 188 H970"/>
+    <path class="trace" d="M0 200 H90 L116 176 H220"/>
+    <path class="trace" d="M1200 200 H1110 L1084 176 H980"/>
     <path class="run" style="animation-delay:0s" d="M0 34 H170 L200 64 H320"/>
     <path class="run" style="animation-delay:-3.1s" d="M1200 40 H1040 L1010 70 H890"/>
     <path class="run" style="animation-delay:-2.4s" d="M420 0 V16 L444 40 H560"/>
-    <path class="run" style="animation-delay:-1.6s" d="M0 214 H90 L118 188 H230"/>
-    <path class="run" style="animation-delay:-0.8s" d="M1200 214 H1110 L1082 188 H970"/>
+    <path class="run" style="animation-delay:-1.6s" d="M0 200 H90 L116 176 H220"/>
+    <path class="run" style="animation-delay:-0.8s" d="M1200 200 H1110 L1084 176 H980"/>
     <g filter="url(#glow)">
       <circle class="node" style="animation-delay:0s" cx="320" cy="64" r="4"/>
       <circle class="node" style="animation-delay:-1.55s" cx="890" cy="70" r="4"/>
       <circle class="node" style="animation-delay:-1.2s" cx="560" cy="40" r="4"/>
-      <circle class="node" style="animation-delay:-0.8s" cx="230" cy="188" r="4"/>
-      <circle class="node" style="animation-delay:-0.4s" cx="970" cy="188" r="4"/>
+      <circle class="node" style="animation-delay:-0.8s" cx="220" cy="176" r="4"/>
+      <circle class="node" style="animation-delay:-0.4s" cx="980" cy="176" r="4"/>
     </g>
 
     <g class="mono">
       <text class="code"   x="40"  y="104" style="animation-delay:0s">@page "/pedidos"</text>
-      <text class="code b" x="40"  y="136" style="animation-delay:-3s">await col.Find(f).ToListAsync();</text>
-      <text class="code"   x="40"  y="168" style="animation-delay:-6s">builder.Services.AddRazorComponents();</text>
+      <text class="code b" x="40"  y="134" style="animation-delay:-3s">await col.Find(f).ToListAsync();</text>
+      <text class="code"   x="40"  y="160" style="animation-delay:-6s">builder.Services.AddRazorComponents();</text>
       <text class="code b" x="1160" y="104" text-anchor="end" style="animation-delay:-1.5s">@app.post("/licitaciones")</text>
-      <text class="code"   x="1160" y="136" text-anchor="end" style="animation-delay:-4.5s">fun main() = runBlocking { }</text>
-      <text class="code b" x="1160" y="168" text-anchor="end" style="animation-delay:-7.5s">Widget build(BuildContext ctx)</text>
+      <text class="code"   x="1160" y="134" text-anchor="end" style="animation-delay:-4.5s">fun main() = runBlocking { }</text>
+      <text class="code b" x="1160" y="160" text-anchor="end" style="animation-delay:-7.5s">Widget build(BuildContext ctx)</text>
     </g>
 
     <g text-anchor="middle">
-      <text class="mono" x="600" y="128" font-size="54" font-weight="700" fill="#ffffff">
+      <text class="mono" x="600" y="122" font-size="54" font-weight="700" fill="#ffffff">
         <tspan fill="#7C5CFF">&lt;</tspan>Adolfo Prado<tspan fill="#7C5CFF"> /&gt;</tspan>
       </text>
-      <text class="mono" x="600" y="170" font-size="19" fill="#b8c0ff">
+      <text class="mono" x="600" y="162" font-size="19" fill="#b8c0ff">
         Desarrollador full-stack · Blazor / .NET<tspan class="cursor" fill="#38BDF8">_</tspan>
       </text>
     </g>
