@@ -19,20 +19,20 @@
 
 ### Sobre mí
 
-Desarrollador web en **LPS Grupo**, donde trabajo en un ERP hecho con Blazor Server y en todo lo que lo rodea: bases de datos, integraciones, automatizaciones e infraestructura en la nube.
+Desarrollo aplicaciones web con Blazor Server y .NET, sobre todo herramientas de gestión que una empresa usa a diario y que no se pueden caer. Lo que más disfruto es lo que pasa por detrás: conectar sistemas que no se hablan entre sí, automatizar tareas que alguien hacía a mano y montar la infraestructura para que todo funcione solo.
 
-Empecé como técnico informático. Eso me dejó una base de sistemas y soporte que sigo usando, y la costumbre de entender qué necesita de verdad el usuario antes de ponerme a programar. Después me formé en DAM y trabajé en desarrollo Android con Kotlin antes de pasarme a .NET.
+Empecé como técnico informático, y de ahí me quedó la costumbre de entender qué necesita de verdad el usuario antes de ponerme a programar. Luego vino el desarrollo móvil con Kotlin y Flutter, que sigo usando en proyectos propios.
 
 Me gusta que el código se pueda mantener dentro de un año, no solo que funcione hoy.
 
-### En qué trabajo
+### En qué me centro
 
-- **ERP con Blazor Server:** nuevas funcionalidades, mantenimiento y despliegues
-- **Datos:** MongoDB y PostgreSQL (Supabase), desde el diseño hasta las consultas
+- **Aplicaciones de gestión con Blazor Server:** desde la funcionalidad nueva hasta el despliegue
+- **Datos:** MongoDB y PostgreSQL, diseño de modelos y consultas
 - **Integraciones y automatización:** servicios con Python y FastAPI, flujos con n8n
-- **IA aplicada:** agentes que filtran licitaciones públicas, resumen requisitos y extraen documentación
-- **Cloud:** AWS (EC2, S3 con ciclos de vida y copias automáticas) y despliegues en Railway
-- **Móvil:** apps Android con Kotlin, publicación en Firebase y Google Play
+- **IA aplicada:** agentes que leen documentación, filtran información y resumen lo importante
+- **Cloud:** AWS (EC2, S3) y despliegues en Railway
+- **Móvil:** apps Android con Kotlin y multiplataforma con Flutter
 
 ### Proyectos destacados
 
