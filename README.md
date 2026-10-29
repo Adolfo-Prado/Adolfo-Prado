@@ -11,16 +11,17 @@
   <a href="mailto:adolfo.pra.mart@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contacto-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
   </a>
-  <img src="https://img.shields.io/badge/Madrid-Espa%C3%B1a-512BD4?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Madrid, España">
 </p>
 
 <h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Nerd%20Face.png" width="32" align="center"> Sobre mí</h2>
 
-Desarrollo aplicaciones web con Blazor Server y .NET, sobre todo herramientas de gestión que una empresa usa a diario y que no se pueden caer. Lo que más disfruto es lo que pasa por detrás: conectar sistemas que no se hablan entre sí, automatizar tareas que alguien hacía a mano y montar la infraestructura para que todo funcione solo.
+Soy desarrollador full-stack y trabajo sobre todo con Blazor Server y .NET. Me siento cómodo en los dos lados de una aplicación, aunque lo que más me engancha es la parte que no se ve: hacer que dos sistemas se entiendan, automatizar lo que alguien hacía a mano cada semana y dejar la infraestructura lista para que todo funcione sin sustos.
 
-Empecé como técnico informático, y de ahí me quedó la costumbre de entender qué necesita de verdad el usuario antes de ponerme a programar. Luego vino el desarrollo móvil con Kotlin y Flutter, que sigo usando en proyectos propios.
+No empecé programando. Mis primeros años fueron como técnico informático, resolviendo los problemas del día a día de otras personas, y de ahí me llevé algo que sigo aplicando: escuchar primero y programar después. Más tarde llegó el desarrollo móvil con Kotlin y Flutter, y aunque hoy mi día a día es .NET, las apps móviles siguen siendo mi terreno para proyectos personales.
 
-> Me gusta que el código se pueda mantener dentro de un año, no solo que funcione hoy.
+Últimamente ando metido en IA aplicada: agentes que leen documentación y sacan lo importante para que nadie tenga que hacerlo a mano.
+
+> Intento escribir código que dentro de un año siga siendo fácil de entender y de cambiar.
 
 <h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Light%20Bulb.png" width="32" align="center"> En qué me centro</h2>
 
