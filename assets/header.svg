@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" width="1200" height="330" role="img" aria-label="Adolfo Prado · Desarrollador full-stack · Blazor / .NET">
+  <defs>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7C5CFF"/><stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#512BD4" stop-opacity="0.35"/><stop offset="1" stop-color="#512BD4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- transparencia lateral: las capas se aclaran en los extremos y se intensifican en el centro -->
+    <linearGradient id="sideFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="0.3" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.6"/>
+      <stop offset="0.7" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="vfade" x1="0" y1="225" x2="0" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.55" stop-color="#fff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="bodyMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="330">
+      <rect width="1200" height="330" fill="url(#vfade)"/>
+    </mask>
+    <linearGradient id="rfade" x1="0" y1="255" x2="0" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="ridgeMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="330">
+      <rect width="1200" height="330" fill="url(#rfade)"/>
+    </mask>
+    <mask id="sideMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="330">
+      <rect width="1200" height="330" fill="url(#sideFade)"/>
+    </mask>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b0f1a"/>
+      <stop offset="0.6" stop-color="#140f34"/>
+      <stop offset="1" stop-color="#101a3a"/>
+    </linearGradient>
+    <clipPath id="card"><rect width="1200" height="330" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace; }
+    .code { font-size: 14px; fill: #8b9cff; opacity: 0; animation: drift 9s linear infinite; }
+    .code.b { fill: #5cc8ff; }
+    .trace { fill: none; stroke: #2b2f5a; stroke-width: 2; }
+    .run { fill: none; stroke: url(#pulse); stroke-width: 2.5; stroke-linecap: round;
+           stroke-dasharray: 60 1400; stroke-dashoffset: 1460; animation: run 5s linear infinite; }
+    .node { fill: #7C5CFF; animation: blink 2.4s ease-in-out infinite; }
+    .cursor { animation: cursor 1s steps(1) infinite; }
+    .flow { animation: flow linear infinite; }
+    .mark { font-size: 22px; font-weight: 700; fill: #7C5CFF; animation: blink 3s ease-in-out infinite; }
+    @keyframes flow { from { transform: translateX(0); } to { transform: translateX(-1200px); } }
+    @keyframes drift { 0% { opacity: 0; transform: translateY(8px); }
+                       20% { opacity: 0.55; } 80% { opacity: 0.55; }
+                       100% { opacity: 0; transform: translateY(-8px); } }
+    @keyframes run { to { stroke-dashoffset: 0; } }
+    @keyframes blink { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+    @keyframes cursor { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+  </style>
+  <g clip-path="url(#card)">
+    <g mask="url(#bodyMask)">
+      <rect width="1200" height="330" fill="url(#bg)"/>
+      <rect width="1200" height="330" fill="url(#grid)"/>
+    </g>
+    <ellipse cx="600" cy="130" rx="420" ry="130" fill="url(#halo)"/>
+    <g mask="url(#ridgeMask)">
+      <g mask="url(#sideMask)">
+        <g>
+      <g class="flow" style="animation-duration:28s"><polygon points="0,330 0,246 80,233 165,265 228,228 340,258 406,247 503,227 621,256 694,226 759,251 845,228 920,229 1015,251 1078,260 1200,246 1280,233 1365,265 1428,228 1540,258 1606,247 1703,227 1821,256 1894,226 1959,251 2045,228 2120,229 2215,251 2278,260 2400,246 2400,330" fill="#2a1f6e" fill-opacity="0.55"/><polyline points="0,246 80,233 165,265 228,228 340,258 406,247 503,227 621,256 694,226 759,251 845,228 920,229 1015,251 1078,260 1200,246 1280,233 1365,265 1428,228 1540,258 1606,247 1703,227 1821,256 1894,226 1959,251 2045,228 2120,229 2215,251 2278,260 2400,246" fill="none" stroke="#8B6CFF" stroke-opacity="0.6" stroke-width="1.5"/></g>
+      <g class="flow" style="animation-duration:19s"><polygon points="0,330 0,270 70,280 174,280 274,272 364,267 474,284 585,286 656,286 749,269 859,254 919,277 1038,281 1102,263 1200,270 1270,280 1374,280 1474,272 1564,267 1674,284 1785,286 1856,286 1949,269 2059,254 2119,277 2238,281 2302,263 2400,270 2400,330" fill="#16305f" fill-opacity="0.6"/><polyline points="0,270 70,280 174,280 274,272 364,267 474,284 585,286 656,286 749,269 859,254 919,277 1038,281 1102,263 1200,270 1270,280 1374,280 1474,272 1564,267 1674,284 1785,286 1856,286 1949,269 2059,254 2119,277 2238,281 2302,263 2400,270" fill="none" stroke="#38BDF8" stroke-opacity="0.55" stroke-width="1.5"/></g>
+      <g class="flow" style="animation-duration:13s"><polygon points="0,330 0,294 100,285 161,305 238,289 312,286 419,285 522,305 639,299 704,300 791,283 852,284 925,289 1017,301 1078,299 1200,294 1300,285 1361,305 1438,289 1512,286 1619,285 1722,305 1839,299 1904,300 1991,283 2052,284 2125,289 2217,301 2278,299 2400,294 2400,330" fill="#1d1650" fill-opacity="0.75"/><polyline points="0,294 100,285 161,305 238,289 312,286 419,285 522,305 639,299 704,300 791,283 852,284 925,289 1017,301 1078,299 1200,294 1300,285 1361,305 1438,289 1512,286 1619,285 1722,305 1839,299 1904,300 1991,283 2052,284 2125,289 2217,301 2278,299 2400,294" fill="none" stroke="#8B6CFF" stroke-opacity="0.75" stroke-width="1.5"/><circle cx="100" cy="285" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="238" cy="289" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="419" cy="285" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="639" cy="299" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="791" cy="283" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="925" cy="289" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1078" cy="299" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1300" cy="285" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1438" cy="289" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1619" cy="285" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1839" cy="299" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="1991" cy="283" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="2125" cy="289" r="2.4" fill="#38BDF8" fill-opacity="0.75"/><circle cx="2278" cy="299" r="2.4" fill="#38BDF8" fill-opacity="0.75"/></g>
+        </g>
+      </g>
+    </g>
+
+    <path class="trace" d="M0 34 H170 L200 64 H320"/>
+    <path class="trace" d="M1200 40 H1040 L1010 70 H890"/>
+    <path class="trace" d="M420 0 V16 L444 40 H560"/>
+    <path class="trace" d="M0 200 H90 L116 176 H220"/>
+    <path class="trace" d="M1200 200 H1110 L1084 176 H980"/>
+    <path class="run" style="animation-delay:0s" d="M0 34 H170 L200 64 H320"/>
+    <path class="run" style="animation-delay:-3.1s" d="M1200 40 H1040 L1010 70 H890"/>
+    <path class="run" style="animation-delay:-2.4s" d="M420 0 V16 L444 40 H560"/>
+    <path class="run" style="animation-delay:-1.6s" d="M0 200 H90 L116 176 H220"/>
+    <path class="run" style="animation-delay:-0.8s" d="M1200 200 H1110 L1084 176 H980"/>
+    <g filter="url(#glow)">
+      <circle class="node" style="animation-delay:0s" cx="320" cy="64" r="4"/>
+      <circle class="node" style="animation-delay:-1.55s" cx="890" cy="70" r="4"/>
+      <circle class="node" style="animation-delay:-1.2s" cx="560" cy="40" r="4"/>
+      <circle class="node" style="animation-delay:-0.8s" cx="220" cy="176" r="4"/>
+      <circle class="node" style="animation-delay:-0.4s" cx="980" cy="176" r="4"/>
+    </g>
+
+    <g class="mono">
+      <text class="code"   x="40"  y="104" style="animation-delay:0s">@page "/pedidos"</text>
+      <text class="code b" x="40"  y="134" style="animation-delay:-3s">await col.Find(f).ToListAsync();</text>
+      <text class="code"   x="40"  y="160" style="animation-delay:-6s">builder.Services.AddRazorComponents();</text>
+      <text class="code b" x="1160" y="104" text-anchor="end" style="animation-delay:-1.5s">@app.post("/licitaciones")</text>
+      <text class="code"   x="1160" y="134" text-anchor="end" style="animation-delay:-4.5s">fun main() = runBlocking { }</text>
+      <text class="code b" x="1160" y="160" text-anchor="end" style="animation-delay:-7.5s">Widget build(BuildContext ctx)</text>
+    </g>
+
+    <g text-anchor="middle">
+      <text class="mono" x="600" y="122" font-size="54" font-weight="700" fill="#ffffff">
+        <tspan fill="#7C5CFF">&lt;</tspan>Adolfo Prado<tspan fill="#7C5CFF"> /&gt;</tspan>
+      </text>
+      <text class="mono" x="600" y="162" font-size="19" fill="#b8c0ff">
+        Desarrollador full-stack · Blazor / .NET<tspan class="cursor" fill="#38BDF8">_</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,91 @@
+<img src="assets/header.svg" width="100%" alt="Adolfo Prado · Desarrollador full-stack · Blazor / .NET">
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1500&color=7C5CFF&center=true&vCenter=true&width=480&lines=Aplicaciones+de+gesti%C3%B3n+con+Blazor+Server;Integraciones+y+automatizaci%C3%B3n;Agentes+de+IA+que+leen+documentaci%C3%B3n;Apps+m%C3%B3viles+con+Kotlin+y+Flutter" alt="Blazor Server · Integraciones · IA aplicada · Kotlin y Flutter">
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/adolfo-prado-martinez">
+    <img src="https://img.shields.io/badge/LinkedIn-Adolfo%20Prado-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn">
+  </a>
+  <a href="mailto:adolfo.pra.mart@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contacto-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+</p>
+
+<h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Nerd%20Face.png" width="32" align="center"> Sobre mí</h2>
+
+Soy desarrollador full-stack y trabajo sobre todo con Blazor Server y .NET. Me siento cómodo en los dos lados de una aplicación, aunque lo que más me engancha es la parte que no se ve: hacer que dos sistemas se entiendan, automatizar lo que alguien hacía a mano cada semana y dejar la infraestructura lista para que todo funcione sin sustos.
+
+No empecé programando. Mis primeros años fueron como técnico informático, resolviendo los problemas del día a día de otras personas, y de ahí me llevé algo que sigo aplicando: escuchar primero y programar después. Más tarde llegó el desarrollo móvil con Kotlin y Flutter, y aunque hoy mi día a día es .NET, las apps móviles siguen siendo mi terreno para proyectos personales.
+
+Últimamente ando metido en IA aplicada: agentes que leen documentación y sacan lo importante para que nadie tenga que hacerlo a mano.
+
+> Intento escribir código que dentro de un año siga siendo fácil de entender y de cambiar.
+
+<h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Light%20Bulb.png" width="32" align="center"> En qué me centro</h2>
+
+- **Aplicaciones de gestión con Blazor Server:** desde la funcionalidad nueva hasta el despliegue
+- **Datos:** MongoDB y PostgreSQL, diseño de modelos y consultas
+- **Integraciones y automatización:** servicios con Python y FastAPI, flujos con n8n
+- **IA aplicada:** agentes que leen documentación, filtran información y resumen lo importante
+- **Cloud:** AWS (EC2, S3) y despliegues en Railway
+- **Móvil:** apps Android con Kotlin y multiplataforma con Flutter
+
+<h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="32" align="center"> Proyectos destacados</h2>
+
+#### AP-ArtStore
+Plataforma de venta y gestión de cuadros hecha con Blazor Server.
+
+- Catálogo de obras y gestión de pedidos
+- Panel de administración
+- _En desarrollo, pronto público_
+
+#### Próximamente
+Un proyecto móvil con Kotlin o Flutter.
+
+<h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="32" align="center"> Tecnologías</h2>
+
+**Web y backend**
+
+<table align="center">
+  <tr>
+    <td align="center"><a href="https://learn.microsoft.com/dotnet/csharp/" title="C#"><img src="https://skillicons.dev/icons?i=cs" title="C#" alt="C#" width="44"></a><br><sub>C#</sub></td>
+    <td align="center"><a href="https://dotnet.microsoft.com/" title=".NET"><img src="https://skillicons.dev/icons?i=dotnet" title=".NET" alt=".NET" width="44"></a><br><sub>.NET</sub></td>
+    <td align="center"><a href="https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor" title="Blazor"><img src="assets/icons/blazor.svg" title="Blazor" alt="Blazor" width="44"></a><br><sub>Blazor</sub></td>
+    <td align="center"><a href="https://www.mongodb.com/" title="MongoDB"><img src="https://skillicons.dev/icons?i=mongodb" title="MongoDB" alt="MongoDB" width="44"></a><br><sub>MongoDB</sub></td>
+    <td align="center"><a href="https://www.postgresql.org/" title="PostgreSQL"><img src="https://skillicons.dev/icons?i=postgres" title="PostgreSQL" alt="PostgreSQL" width="44"></a><br><sub>PostgreSQL</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://supabase.com/" title="Supabase"><img src="https://skillicons.dev/icons?i=supabase" title="Supabase" alt="Supabase" width="44"></a><br><sub>Supabase</sub></td>
+    <td align="center"><a href="https://www.python.org/" title="Python"><img src="https://skillicons.dev/icons?i=py" title="Python" alt="Python" width="44"></a><br><sub>Python</sub></td>
+    <td align="center"><a href="https://fastapi.tiangolo.com/" title="FastAPI"><img src="https://skillicons.dev/icons?i=fastapi" title="FastAPI" alt="FastAPI" width="44"></a><br><sub>FastAPI</sub></td>
+    <td align="center"><a href="https://aws.amazon.com/" title="AWS"><img src="https://skillicons.dev/icons?i=aws" title="AWS" alt="AWS" width="44"></a><br><sub>AWS</sub></td>
+    <td align="center"><a href="https://www.kernel.org/" title="Linux"><img src="https://skillicons.dev/icons?i=linux" title="Linux" alt="Linux" width="44"></a><br><sub>Linux</sub></td>
+  </tr>
+</table>
+
+**Móvil y frontend**
+
+<table align="center">
+  <tr>
+    <td align="center"><a href="https://kotlinlang.org/" title="Kotlin"><img src="https://skillicons.dev/icons?i=kotlin" title="Kotlin" alt="Kotlin" width="44"></a><br><sub>Kotlin</sub></td>
+    <td align="center"><a href="https://flutter.dev/" title="Flutter"><img src="https://skillicons.dev/icons?i=flutter" title="Flutter" alt="Flutter" width="44"></a><br><sub>Flutter</sub></td>
+    <td align="center"><a href="https://dart.dev/" title="Dart"><img src="https://skillicons.dev/icons?i=dart" title="Dart" alt="Dart" width="44"></a><br><sub>Dart</sub></td>
+    <td align="center"><a href="https://firebase.google.com/" title="Firebase"><img src="https://skillicons.dev/icons?i=firebase" title="Firebase" alt="Firebase" width="44"></a><br><sub>Firebase</sub></td>
+    <td align="center"><a href="https://angular.dev/" title="Angular"><img src="https://skillicons.dev/icons?i=angular" title="Angular" alt="Angular" width="44"></a><br><sub>Angular</sub></td>
+  </tr>
+</table>
+
+**Automatización y despliegue**
+
+<table align="center">
+  <tr>
+    <td align="center"><a href="https://n8n.io/" title="n8n"><img src="assets/icons/n8n.svg" title="n8n" alt="n8n" width="44"></a><br><sub>n8n</sub></td>
+    <td align="center"><a href="https://railway.com/" title="Railway"><img src="assets/icons/railway.svg" title="Railway" alt="Railway" width="44"></a><br><sub>Railway</sub></td>
+    <td align="center"><a href="https://openrouter.ai/" title="OpenRouter"><img src="assets/icons/openrouter.svg" title="OpenRouter" alt="OpenRouter" width="44"></a><br><sub>OpenRouter</sub></td>
+    <td align="center"><a href="https://git-scm.com/" title="Git"><img src="https://skillicons.dev/icons?i=git" title="Git" alt="Git" width="44"></a><br><sub>Git</sub></td>
+  </tr>
+</table>
+
+<img src="assets/footer.svg" width="100%" alt="">
